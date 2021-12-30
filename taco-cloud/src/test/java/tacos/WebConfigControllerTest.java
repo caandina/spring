@@ -14,9 +14,11 @@ import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
 import org.springframework.test.context.junit4.SpringRunner;
 import org.springframework.test.web.servlet.MockMvc;
 
+import tacos.web.WebConfig;
+
 @RunWith(SpringRunner.class)
-@WebMvcTest(HomeController.class) // provista por SpringBoot, el test correrá en el contexto de Spring MVC. También testeará SpringMVC
-public class HomeControllerTest {
+@WebMvcTest(WebConfig.class) // provista por SpringBoot, el test correrá en el contexto de Spring MVC. También testeará SpringMVC
+public class WebConfigControllerTest {
 	
 	@Autowired 
 	private MockMvc mockMvc; // inyecta el objeto para que el testing dirija los mocks
